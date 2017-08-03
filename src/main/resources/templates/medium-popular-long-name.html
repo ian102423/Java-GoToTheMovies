@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Go To The Movies - Medium Popular Long Name</title>
+</head>
+<body>
+<a href="./home">Home Page</a>
+<h1>Medium Popular Long Name Page</h1>
+<h4>Movie Chart:</h4>
+<div th:each="movie : ${movies}">
+    <img width="200px" th:src="${movie.posterPath}"/>
+    <br/>
+    <span th:text="${movie.title}"></span>
+</div>
+</body>
+</html>

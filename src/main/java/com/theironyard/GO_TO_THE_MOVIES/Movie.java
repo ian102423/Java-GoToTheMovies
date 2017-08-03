@@ -6,10 +6,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
 
-    String title;
-    @JsonProperty("poster_path") String posterPath;//TODO: You will need to annotate this with @JsonProperty to make it match to poster_path
-    String overview;
-    double popularity;
+    private String title;
+    @JsonProperty("poster_path")
+    private String posterPath;//TODO: You will need to annotate this with @JsonProperty to make it match to poster_path
+    private String overview;
+    private double popularity;
+    private static final String URL_IMG = "http://image.tmdb.org/t/p/original";
 
     Movie() {
     }
@@ -34,7 +36,7 @@ public class Movie {
     }
 
     public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
+        this.posterPath = URL_IMG + posterPath;
     }
 
     public String getOverview() {

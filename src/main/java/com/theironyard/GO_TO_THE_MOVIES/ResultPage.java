@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ResultPage {
 
-    List<Movie> results;
+    private List<Movie> results;
 
     ResultPage() {
 
